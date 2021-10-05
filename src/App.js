@@ -15,7 +15,7 @@ export default class App extends Component {
     //get random numbers
 
     const req = await axios.get(
-      "https://raw.githubusercontent.com/VGDev1/Ursaktsgeneratorn/master/src/QuoteDB.js"
+      "https://raw.githubusercontent.com/VGDev1/Ursaktsgeneratorn/master/src/QuoteDB.json"
     );
     const quotes = await req.data;
 

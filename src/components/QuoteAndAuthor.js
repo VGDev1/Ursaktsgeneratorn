@@ -9,7 +9,7 @@ export default function QuoteAndAuthor(props) {
   useEffect(() => {
     const x = async () => {
       const result = await axios.get(
-        "https://raw.githubusercontent.com/VGDev1/Ursaktsgeneratorn/master/src/QuoteDB.js"
+        "https://raw.githubusercontent.com/VGDev1/Ursaktsgeneratorn/master/src/QuoteDB.json"
       );
       setData(result.data);
     };
