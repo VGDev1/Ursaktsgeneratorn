@@ -1,17 +1,26 @@
 import React, { Component } from "react";
 import QuoteAndAuthor from "./components/QuoteAndAuthor";
-import quotes from "./QuoteDB";
+//import quotes from "./QuoteDB";
+import axios from "axios";
 
 export default class App extends Component {
   //state
   state = {
-    quote: quotes[0].quote,
-    author: quotes[0].author,
+    quote: "Det kommer inte på tentan",
+    author: "Jakob Westergården",
   };
 
   //generate diffrent quote function
-  generateRandomQuote = (arr) => {
+  generateRandomQuote = async (arr) => {
     //get random numbers
+
+    const req = await axios.get(
+      "https://raw.githubusercontent.com/VGDev1/Ursaktsgeneratorn/master/src/QuoteDB.js"
+    );
+    const quotes = await req.data;
+
+    console.log(quotes);
+
     let num = Math.floor(Math.random() * quotes.length);
 
     let newQuote = quotes[num];

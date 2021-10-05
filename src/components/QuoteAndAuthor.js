@@ -1,8 +1,21 @@
-import React from "react";
-import quotes from "../QuoteDB";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import "./../coolButton.css"; // Tell webpack that Button.js uses these styles
+import quotes from "../QuoteDB";
 
 export default function QuoteAndAuthor(props) {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const x = async () => {
+      const result = await axios.get(
+        "https://raw.githubusercontent.com/VGDev1/Ursaktsgeneratorn/master/src/QuoteDB.js"
+      );
+      setData(result.data);
+    };
+    x();
+  }, []);
+
   const { quote, generateRandomQuote } = props;
   return (
     <div className="bottom-margin">
@@ -17,7 +30,7 @@ export default function QuoteAndAuthor(props) {
           class="button-64"
           role="button"
           onClick={() => {
-            generateRandomQuote(quotes);
+            generateRandomQuote(data);
           }}
         >
           <span class="text">Generera ursäkt</span>
