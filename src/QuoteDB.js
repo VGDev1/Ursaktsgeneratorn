@@ -1,4 +1,4 @@
-const quotes = [
+[
   {
     quote: "Det är en överbetygsuppgift",
     author: "Victor Gunnarsson",
@@ -44,5 +44,3 @@ const quotes = [
     author: "Amin Alian",
   },
 ];
-
-export default quotes;
