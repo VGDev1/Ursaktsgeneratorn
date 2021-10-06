@@ -46,7 +46,7 @@ export default class App extends Component {
     return (
       <div className="container">
         <h1 className="text-center mainheader text-background-clip">
-          B00leanBoisen ursäktsgenerator
+          B00leanBoisens ursäktsgenerator
         </h1>
         <div className="center-screen">
           <QuoteAndAuthor
