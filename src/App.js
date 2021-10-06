@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import QuoteAndAuthor from "./components/QuoteAndAuthor";
 //import quotes from "./QuoteDB";
 import axios from "axios";
+import "./coolText.css"; // Tell webpack that Button.js uses these styles
 
 export default class App extends Component {
   //state
@@ -44,8 +45,8 @@ export default class App extends Component {
   render() {
     return (
       <div className="container">
-        <h1 className="text-center mainheader">
-          B00leanBoisen bästa ursäkter för att inte plugga
+        <h1 className="text-center mainheader text-background-clip">
+          B00leanBoisen ursäktsgenerator
         </h1>
         <div className="center-screen">
           <QuoteAndAuthor

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./../coolButton.css"; // Tell webpack that Button.js uses these styles
-import quotes from "../QuoteDB";
+import "./../coolText.css"; // Tell webpack that Button.js uses these styles
 
 export default function QuoteAndAuthor(props) {
   const [data, setData] = useState([]);
@@ -19,10 +19,10 @@ export default function QuoteAndAuthor(props) {
   const { quote, generateRandomQuote } = props;
   return (
     <div className="bottom-margin">
-      <h2 style={{ textAlign: "center" }} className="card-text">
+      <h2 style={{ textAlign: "center" }} className="text-background-clip">
         {quote.quote}
       </h2>
-      <h4 style={{ textAlign: "center" }} className="card-title">
+      <h4 style={{ textAlign: "center" }} className="text-background-clip">
         - {quote.author}
       </h4>
       <div className="center">

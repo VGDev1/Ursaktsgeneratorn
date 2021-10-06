@@ -1,6 +1,5 @@
 .text-background-clip {
-  background: center / cover
-    url("https://jason.sandbox.etdevs.com/design/wp-content/uploads/sites/4/2021/04/gradient-background-img.jpg");
+  background: center/cover url("https://jason.sandbox.etdevs.com/design/wp-content/uploads/sites/4/2021/04/gradient-background-img.jpg");
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -20,3 +19,4 @@ h2 {
   max-inline-size: 40ch;
   margin: auto;
 }
+/*# sourceMappingURL=coolText.css.map */
