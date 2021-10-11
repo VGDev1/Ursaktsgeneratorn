@@ -19,10 +19,10 @@ export default function QuoteAndAuthor(props) {
   const { quote, generateRandomQuote } = props;
   return (
     <div className="bottom-margin">
-      <h2 style={{ textAlign: "center" }} className="text-background-clip">
+      <h2 style={{ textAlign: "center" }} className="">
         {quote.quote}
       </h2>
-      <h4 style={{ textAlign: "center" }} className="text-background-clip">
+      <h4 style={{ textAlign: "center" }} className="">
         - {quote.author}
       </h4>
       <div className="center">
