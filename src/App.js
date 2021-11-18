@@ -2,7 +2,10 @@ import React, { Component } from "react";
 import QuoteAndAuthor from "./components/QuoteAndAuthor";
 //import quotes from "./QuoteDB";
 import axios from "axios";
+import ReactGA from 'react-ga'
 import "./coolText.css"; // Tell webpack that Button.js uses these styles
+
+ReactGA.initialize('UA-210223105-1', { debug: true });
 
 export default class App extends Component {
   //state
@@ -10,6 +13,9 @@ export default class App extends Component {
     quote: "Det kommer inte på tentan",
     author: "Jakob Westergården",
   };
+
+  componentDidMount  = () => ReactGA.pageview(window.location.pathname + window.location.search);
+
 
   //generate diffrent quote function
   generateRandomQuote = async (arr) => {
